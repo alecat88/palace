@@ -1,4 +1,3 @@
-<?php include("config.php") ?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -6,6 +5,132 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Untitled Document</title>
 
+	<style>
+		#preLoader{
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			background: black;
+			top: 0;
+			left: 0;
+			z-index: 999;
+			display: flex
+		}
+		#preLoader svg{
+			width: 100px;
+  		 	height: 100px;
+    		margin: auto;
+		}
+		#preLoader svg path{
+			fill: #fff;
+		}
+		/*NEW LOADER*/
+		.holder {
+      position: fixed;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 999;
+}
+
+.preloader {
+  position: absolute;
+  width: 10%;
+  height: 0%;
+  padding-bottom: 10%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.preloader div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  overflow: hidden;
+  animation: animatePreloader 1s infinite linear;
+  transform-origin: 50% 100%;
+}
+.preloader div:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.preloader div:nth-child(2) {
+  width: 60%;
+  height: 60%;
+  top: 20%;
+  animation: animatePreloader 0.5s infinite linear;
+}
+@keyframes animatePreloader {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotateZ(360deg);
+  }
+}
+	</style>
+</head>
+<body>
+<div class="holder">
+  <div class="preloader"><div></div><div></div></div>
+</div>
+<div id="preLoader" style="display:none">
+
+	<svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+ <path fill="#fff" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3
+  c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
+      <animateTransform 
+         attributeName="transform" 
+         attributeType="XML" 
+         type="rotate"
+         dur="2s" 
+         from="0 50 50"
+         to="360 50 50" 
+         repeatCount="indefinite" />
+  </path>
+ <path fill="#fff" d="M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7
+  c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z">
+      <animateTransform 
+         attributeName="transform" 
+         attributeType="XML" 
+         type="rotate"
+         dur="1s" 
+         from="0 50 50"
+         to="-360 50 50" 
+         repeatCount="indefinite" />
+  </path>
+ <path fill="#fff" d="M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5
+  L82,35.7z">
+      <animateTransform 
+         attributeName="transform" 
+         attributeType="XML" 
+         type="rotate"
+         dur="2s" 
+         from="0 50 50"
+         to="360 50 50" 
+         repeatCount="indefinite" />
+  </path>
+</svg>
+</div>
+<link rel="stylesheet" href="assets/css/foundationFLEX.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css">
+<link rel="stylesheet" href="assets/css/sliderSlickGsap.css">
 <style>
 	#mainSlider{
 		max-width: none;
@@ -50,66 +175,6 @@
 		}
 	}
 	</style>
-	<style>
-		#preLoader{
-			position: fixed;
-			width: 100vw;
-			height: 100vh;
-			background: black;
-			top: 0;
-			left: 0;
-			z-index: 999;
-			display: flex
-		}
-		#preLoader svg{
-			width: 100px;
-  		 	height: 100px;
-    		margin: auto;
-		}
-		#preLoader svg path{
-			fill: #fff;
-		}
-	</style>
-</head>
-<body>
-<div id="preLoader">
-	<svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-  viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
- <path fill="#fff" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3
-  c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
-      <animateTransform 
-         attributeName="transform" 
-         attributeType="XML" 
-         type="rotate"
-         dur="2s" 
-         from="0 50 50"
-         to="360 50 50" 
-         repeatCount="indefinite" />
-  </path>
- <path fill="#fff" d="M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7
-  c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z">
-      <animateTransform 
-         attributeName="transform" 
-         attributeType="XML" 
-         type="rotate"
-         dur="1s" 
-         from="0 50 50"
-         to="-360 50 50" 
-         repeatCount="indefinite" />
-  </path>
- <path fill="#fff" d="M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5
-  L82,35.7z">
-      <animateTransform 
-         attributeName="transform" 
-         attributeType="XML" 
-         type="rotate"
-         dur="2s" 
-         from="0 50 50"
-         to="360 50 50" 
-         repeatCount="indefinite" />
-  </path>
-</svg>
-</div>
 <?php include ('menu.php'); ?>
 <div id="main">
 	<?php include ('mainSlider.php'); ?>
@@ -119,10 +184,6 @@
 	<div class="content"></div>
 	<img onclick="close()"  class="close-game" src="assets/img/close.svg">
 </div>
-<link rel="stylesheet" href="assets/css/foundationFLEX.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css">
-<link rel="stylesheet" href="assets/css/sliderSlickGsap.css">
 <script src="assets/js/require.js"></script>
 <?php include('requireConfig.php'); ?>
 </body>

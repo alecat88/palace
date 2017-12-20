@@ -7,7 +7,7 @@ function close(){
 		alert('close');
 	}
 $(window).on("load", function() {
-    $('#preLoader').animate({top:-10450},2000,function(){$(this).hide()});
+    $('.holder').animate({top:-10450},2000,function(){$(this).hide()});
 });
 var other = $('#other');
 $(document).ready(function(){
