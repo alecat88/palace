@@ -1,14 +1,17 @@
 // JavaScript Document
-define(['jquery'],function(){
+define(['jquery'],function($){
 	
 
 function close(){
 	console.log('clicked');
 		alert('close');
 	}
-
+$(window).on("load", function() {
+    $('#preLoader').animate({top:-10450},2000,function(){$(this).hide()});
+});
 var other = $('#other');
 $(document).ready(function(){
+	
 	//fullscreen
 	windowWidth= window.innerWidth;
 	windowHeight= window.innerHeight;

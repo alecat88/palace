@@ -5,7 +5,7 @@
                     jquery: 'jquery',
 					slots: [
 						'https://vippalace.it/new/slots',
-						'slot'
+						'slots'
 					],
 					script: 'script',
 					foundation: 'foundation.min',
