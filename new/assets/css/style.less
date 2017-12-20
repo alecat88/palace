@@ -1,0 +1,83 @@
+/* LESS Document */
+.menu, #main{
+	width: 80%!important;
+	    margin: auto;
+}
+#menu{
+	/*background-color: black*/
+}
+#menu .sticky.is-stuck{
+	left: 10%;
+}
+#main{
+	background-color: white;
+	    overflow: hidden;
+}
+body{
+	    background-color: #0c0c0c;
+	background-image:url(../img/bg.jpg);
+	background-size: 100%;
+background-repeat: no-repeat;
+	    background-attachment: fixed;
+}
+
+#popup-slot {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+	background-size:cover;
+	 display: flex;
+  align-items: center;
+  justify-content: center;
+	z-index: 5;
+}
+#popup-slot .content , #popup-slot .content iframe{
+	width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    max-height: 720px;
+}
+.close-game{
+	position: absolute;
+    right: 0;
+    top: 0;
+	margin: 10px;
+	max-width: 48px;
+	width: 5%;
+	height: auto;
+    z-index: 9;
+}
+.slot, .close-game{
+	cursor: pointer;
+}
+#best{
+	.best1{
+		padding-right: 0;
+	}
+	.best2, .best4{
+		padding-left: 0;
+	}
+	.best3{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+#other .slot{
+	padding: .9375rem;
+}
+/*FOUNDATION REPLACEMENT*/
+
+.menu .is-active>a{
+	background: white;
+    color: black;
+}
+a{
+	color:white
+}
+
+#game .row {
+    max-width: none;
+}

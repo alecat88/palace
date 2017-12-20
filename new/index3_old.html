@@ -1,0 +1,172 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Untitled Document</title>
+<link rel="stylesheet" href="assets/css/foundationFLEX.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css">
+<link rel="stylesheet" href="assets/css/sliderSlickGsap.css">
+<style>
+	#mainSlider{
+		max-width: none;
+	}
+	#mainSlider .slick-list{
+		height: 500px;
+	}
+	#mainSlider .slick-slider, #slotSlider, #slotSlider .slick-slider{
+		height: auto;
+	}
+	
+	#other2{
+		    max-width: 90%!important;
+	}
+	#other2 .slot {
+    padding: .9375rem;
+}
+	#slotSlider .slider--item{
+		height: auto
+	}
+	#main.active{
+		/*display:none*/
+	}
+	@media all and (max-width: 1024px){
+		.menu, #main{
+			width: 100%!important
+		}
+		body{
+			    background-image: none;
+		}
+		#menu .sticky.is-stuck{
+			left:0%
+		}
+	}
+	
+	@media all and (max-width: 1024px) and (orientation: portrait){
+		#mainSlider .slick-list {
+    		height: 50vw;
+		}
+	}
+	</style>
+	<style>
+		.slick-track{height: inherit;}
+		.slider--item{height: 100%}
+		
+		
+		#other .small-4 {
+		padding: 0.2375rem;}
+	
+	@media print, screen and (min-width: 64em){#other .small-4 {
+		padding: .9375rem;}
+}
+	</style>
+</head>
+<body>
+<div id="menu" data-sticky-container>
+	<ul class="menu title-bar sticky" data-sticky data-options="marginTop:0;" style="width:100%" >
+  		<li class="is-active"><a>Home</a></li>
+ 		 <li><a>About</a></li>
+  		<li><a>Nachos</a></li>
+	</ul>
+</div>
+<div id="main">
+	<div class="row">
+	  <div class="columns">Full Column</div>
+	</div>
+	<div class="row" id="mainSlider">
+	  <div class="columns">
+	  	<div class="slider-wrapper">
+  			<div class="slider">
+				<div class="slider--item" style="background-image: url(assets/img/shutterstock_145084777.jpg)">
+				</div>
+				<div class="slider--item" style="background-image: url(assets/img/shutterstock_533153143.jpg)">ciaooo
+				</div>
+				<div class="slider--item" style="background-image: url(assets/img/shutterstock_536582824.jpg); background-position-y: 100%">
+				</div>
+				<div class="slider--item" style="background-image: url(assets/img/shutterstock_661602724.jpg)">
+				</div>
+  			</div>
+		</div>
+	  </div>
+	</div>
+		
+	<div class="row">
+	  <div class="small-6 columns">6 columns</div>
+	  <div class="small-6 columns">6 columns</div>
+	</div>
+	<div class="row">
+	  <div class="medium-6 large-4 columns">12/6/4 columns</div>
+	  <div class="medium-6 large-8 columns">12/6/8 columns</div>
+	</div>
+	<div id="game">
+		<div class="row" id="best">
+	 		<div class="small-12 medium-6 columns">
+				<div class="row">
+	  				<div class="columns best1">Full Column</div>
+				</div>
+			</div>
+	 		<div class="small-12 medium-6 columns">
+				<div class="row">
+	  				<div class="columns best2">Full Column</div>
+				</div>
+				<div class="row">
+	  				<div class="small-6 columns best3">6 columns</div>
+	  				<div class="small-6 columns best4">6 columns</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="other">
+
+		</div>
+		<div style=" background: black" id="slotSlider">
+			<div class="slider-wrapper">
+  			<div class="slider">
+				<div class="slider--item">
+				<div class="row" id="other2">
+
+		<div class="slot small-4 large-3 columns" iframe="https://netent-static.casinomodule.com/games/aloha_mobile_html/game/aloha_mobile_html.xhtml?staticServer=https%3A%2F%2Fnetent-static.casinomodule.com%2F&amp;gameName=aloha.desktop&amp;targetElement=game&amp;flashParams.bgcolor=000000&amp;mobileParams.lobbyURL=https%253A%252F%252Fwww.netent.com%252Fen%252Fsection%252Fentertain%252F&amp;gameId=aloha_not_mobile&amp;server=https%3A%2F%2Fnetent-game.casinomodule.com%2F&amp;lang=en&amp;sessId=DEMO-1880058805923&amp;operatorId=default" bg="url(https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/aloha-game-background.jpg)"><img alt="Vip Palace - Aloha! Cluster Pays" src="https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/Aloha_thumb.png"></div><div class="slot small-4 large-3 columns" iframe="https://netent-static.casinomodule.com/games/aloha_mobile_html/game/aloha_mobile_html.xhtml?staticServer=https%3A%2F%2Fnetent-static.casinomodule.com%2F&amp;gameName=aloha.desktop&amp;targetElement=game&amp;flashParams.bgcolor=000000&amp;mobileParams.lobbyURL=https%253A%252F%252Fwww.netent.com%252Fen%252Fsection%252Fentertain%252F&amp;gameId=aloha_not_mobile&amp;server=https%3A%2F%2Fnetent-game.casinomodule.com%2F&amp;lang=en&amp;sessId=DEMO-1880058805923&amp;operatorId=default" bg="url(https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/aloha-game-background.jpg)"><img alt="Vip Palace - Aloha! Cluster Pays" src="https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/Aloha_thumb.png"></div><div class="slot small-4 large-3 columns" iframe="https://netent-static.casinomodule.com/games/aloha_mobile_html/game/aloha_mobile_html.xhtml?staticServer=https%3A%2F%2Fnetent-static.casinomodule.com%2F&amp;gameName=aloha.desktop&amp;targetElement=game&amp;flashParams.bgcolor=000000&amp;mobileParams.lobbyURL=https%253A%252F%252Fwww.netent.com%252Fen%252Fsection%252Fentertain%252F&amp;gameId=aloha_not_mobile&amp;server=https%3A%2F%2Fnetent-game.casinomodule.com%2F&amp;lang=en&amp;sessId=DEMO-1880058805923&amp;operatorId=default" bg="url(https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/aloha-game-background.jpg)"><img alt="Vip Palace - Aloha! Cluster Pays" src="https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/Aloha_thumb.png"></div><div class="slot small-4 large-3 columns" iframe="https://netent-static.casinomodule.com/games/aloha_mobile_html/game/aloha_mobile_html.xhtml?staticServer=https%3A%2F%2Fnetent-static.casinomodule.com%2F&amp;gameName=aloha.desktop&amp;targetElement=game&amp;flashParams.bgcolor=000000&amp;mobileParams.lobbyURL=https%253A%252F%252Fwww.netent.com%252Fen%252Fsection%252Fentertain%252F&amp;gameId=aloha_not_mobile&amp;server=https%3A%2F%2Fnetent-game.casinomodule.com%2F&amp;lang=en&amp;sessId=DEMO-1880058805923&amp;operatorId=default" bg="url(https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/aloha-game-background.jpg)"><img alt="Vip Palace - Aloha! Cluster Pays" src="https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/Aloha_thumb.png"></div><div class="slot small-4 large-3 columns" iframe="https://netent-static.casinomodule.com/games/aloha_mobile_html/game/aloha_mobile_html.xhtml?staticServer=https%3A%2F%2Fnetent-static.casinomodule.com%2F&amp;gameName=aloha.desktop&amp;targetElement=game&amp;flashParams.bgcolor=000000&amp;mobileParams.lobbyURL=https%253A%252F%252Fwww.netent.com%252Fen%252Fsection%252Fentertain%252F&amp;gameId=aloha_not_mobile&amp;server=https%3A%2F%2Fnetent-game.casinomodule.com%2F&amp;lang=en&amp;sessId=DEMO-1880058805923&amp;operatorId=default" bg="url(https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/aloha-game-background.jpg)"><img alt="Vip Palace - Aloha! Cluster Pays" src="https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/Aloha_thumb.png"></div><div class="slot small-4 large-3 columns" iframe="https://netent-static.casinomodule.com/games/aloha_mobile_html/game/aloha_mobile_html.xhtml?staticServer=https%3A%2F%2Fnetent-static.casinomodule.com%2F&amp;gameName=aloha.desktop&amp;targetElement=game&amp;flashParams.bgcolor=000000&amp;mobileParams.lobbyURL=https%253A%252F%252Fwww.netent.com%252Fen%252Fsection%252Fentertain%252F&amp;gameId=aloha_not_mobile&amp;server=https%3A%2F%2Fnetent-game.casinomodule.com%2F&amp;lang=en&amp;sessId=DEMO-1880058805923&amp;operatorId=default" bg="url(https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/aloha-game-background.jpg)"><img alt="Vip Palace - Aloha! Cluster Pays" src="https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/Aloha_thumb.png"></div><div class="slot small-4 large-3 columns" iframe="https://netent-static.casinomodule.com/games/aloha_mobile_html/game/aloha_mobile_html.xhtml?staticServer=https%3A%2F%2Fnetent-static.casinomodule.com%2F&amp;gameName=aloha.desktop&amp;targetElement=game&amp;flashParams.bgcolor=000000&amp;mobileParams.lobbyURL=https%253A%252F%252Fwww.netent.com%252Fen%252Fsection%252Fentertain%252F&amp;gameId=aloha_not_mobile&amp;server=https%3A%2F%2Fnetent-game.casinomodule.com%2F&amp;lang=en&amp;sessId=DEMO-1880058805923&amp;operatorId=default" bg="url(https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/aloha-game-background.jpg)"><img alt="Vip Palace - Aloha! Cluster Pays" src="https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/Aloha_thumb.png"></div><div class="slot small-4 large-3 columns" iframe="https://netent-static.casinomodule.com/games/aloha_mobile_html/game/aloha_mobile_html.xhtml?staticServer=https%3A%2F%2Fnetent-static.casinomodule.com%2F&amp;gameName=aloha.desktop&amp;targetElement=game&amp;flashParams.bgcolor=000000&amp;mobileParams.lobbyURL=https%253A%252F%252Fwww.netent.com%252Fen%252Fsection%252Fentertain%252F&amp;gameId=aloha_not_mobile&amp;server=https%3A%2F%2Fnetent-game.casinomodule.com%2F&amp;lang=en&amp;sessId=DEMO-1880058805923&amp;operatorId=default" bg="url(https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/aloha-game-background.jpg)"><img alt="Vip Palace - Aloha! Cluster Pays" src="https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/Aloha_thumb.png"></div><div class="slot small-4 large-3 columns" iframe="https://netent-static.casinomodule.com/games/aloha_mobile_html/game/aloha_mobile_html.xhtml?staticServer=https%3A%2F%2Fnetent-static.casinomodule.com%2F&amp;gameName=aloha.desktop&amp;targetElement=game&amp;flashParams.bgcolor=000000&amp;mobileParams.lobbyURL=https%253A%252F%252Fwww.netent.com%252Fen%252Fsection%252Fentertain%252F&amp;gameId=aloha_not_mobile&amp;server=https%3A%2F%2Fnetent-game.casinomodule.com%2F&amp;lang=en&amp;sessId=DEMO-1880058805923&amp;operatorId=default" bg="url(https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/aloha-game-background.jpg)"><img alt="Vip Palace - Aloha! Cluster Pays" src="https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/Aloha_thumb.png"></div><div class="slot small-4 large-3 columns" iframe="https://netent-static.casinomodule.com/games/aloha_mobile_html/game/aloha_mobile_html.xhtml?staticServer=https%3A%2F%2Fnetent-static.casinomodule.com%2F&amp;gameName=aloha.desktop&amp;targetElement=game&amp;flashParams.bgcolor=000000&amp;mobileParams.lobbyURL=https%253A%252F%252Fwww.netent.com%252Fen%252Fsection%252Fentertain%252F&amp;gameId=aloha_not_mobile&amp;server=https%3A%2F%2Fnetent-game.casinomodule.com%2F&amp;lang=en&amp;sessId=DEMO-1880058805923&amp;operatorId=default" bg="url(https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/aloha-game-background.jpg)"><img alt="Vip Palace - Aloha! Cluster Pays" src="https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/Aloha_thumb.png"></div><div class="slot small-4 large-3 columns" iframe="https://netent-static.casinomodule.com/games/aloha_mobile_html/game/aloha_mobile_html.xhtml?staticServer=https%3A%2F%2Fnetent-static.casinomodule.com%2F&amp;gameName=aloha.desktop&amp;targetElement=game&amp;flashParams.bgcolor=000000&amp;mobileParams.lobbyURL=https%253A%252F%252Fwww.netent.com%252Fen%252Fsection%252Fentertain%252F&amp;gameId=aloha_not_mobile&amp;server=https%3A%2F%2Fnetent-game.casinomodule.com%2F&amp;lang=en&amp;sessId=DEMO-1880058805923&amp;operatorId=default" bg="url(https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/aloha-game-background.jpg)"><img alt="Vip Palace - Aloha! Cluster Pays" src="https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/Aloha_thumb.png"></div><div class="slot small-4 large-3 columns" iframe="https://netent-static.casinomodule.com/games/aloha_mobile_html/game/aloha_mobile_html.xhtml?staticServer=https%3A%2F%2Fnetent-static.casinomodule.com%2F&amp;gameName=aloha.desktop&amp;targetElement=game&amp;flashParams.bgcolor=000000&amp;mobileParams.lobbyURL=https%253A%252F%252Fwww.netent.com%252Fen%252Fsection%252Fentertain%252F&amp;gameId=aloha_not_mobile&amp;server=https%3A%2F%2Fnetent-game.casinomodule.com%2F&amp;lang=en&amp;sessId=DEMO-1880058805923&amp;operatorId=default" bg="url(https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/aloha-game-background.jpg)"><img alt="Vip Palace - Aloha! Cluster Pays" src="https://www.netent.com/en/wp-content/uploads/sites/2/2016/03/Aloha_thumb.png"></div>
+					</div></div>
+				<div class="slider--item" >
+				</div>
+				<div class="slider--item">
+				</div>
+				<div class="slider--item">
+				</div>
+  			</div>
+		</div>
+		</div>
+	</div>
+</div>
+<div id="popup-slot" style="display:none">
+	<div class="content"></div>
+	<img onclick="close()"  class="close-game" src="assets/img/close.svg">
+</div>
+<script src="assets/js/require.js"></script>
+<script>
+	require.config({
+		baseUrl: "assets/js",
+                paths: {
+                    jquery: 'jquery',
+					slots: [
+						'https://vippalace.it/new/slots',
+						'slot'
+					],
+					script: 'script',
+					foundation: 'foundation.min',
+					foundationEnabler: 'foundationEnabler',
+					slick: 'https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min',
+					TweenMax: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min',
+					sliderSlickGsap: 'sliderSlickGsap'
+                },
+		shim: {
+        	"foundation": ["jquery"],
+			"slick": ["jquery"],
+			"TweenMax": ["jquery"],
+			sliderSlickGsap: ["jquery", "slick", "TweenMax"],
+    },
+            });
+            require(["jquery","slots","script","foundation","foundationEnabler","slick","TweenMax","sliderSlickGsap"],"");
+</script>
+</body>
+</html>
