@@ -172,3 +172,24 @@
 .slick-dots li button:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+
+#mainSlider .slick-dots li button {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    margin: 0 10px 0 0;
+    opacity: .5;
+    width: 14px;
+    position: relative;
+    bottom: 14px;
+}
+#mainSlider .slick-dots li.slick-active button{
+	opacity: 1;
+}
+#mainSlider .slick-arrow {
+    display: none;
+}
