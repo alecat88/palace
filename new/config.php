@@ -13,14 +13,5 @@ if ($mysqli->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO slots (name, description, operator) VALUES ('Jsdfohn', 'Doe', 'john@example.com')";
 
-if ($mysqli->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $mysqli->error;
-}
-
-
-$mysqli->close();
 ?>
