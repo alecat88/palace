@@ -191,5 +191,5 @@
 	opacity: 1;
 }
 #mainSlider .slick-arrow {
-    display: none;
+    display: none!important;
 }
