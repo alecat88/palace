@@ -185,7 +185,7 @@
     opacity: .5;
     width: 14px;
     position: relative;
-    bottom: 14px;
+    bottom: 0px;
 }
 #mainSlider .slick-dots li.slick-active button{
 	opacity: 1;
