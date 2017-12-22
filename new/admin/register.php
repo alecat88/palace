@@ -1,59 +1,33 @@
 <?php
-include_once 'includes/register.inc.php';
-include_once 'includes/functions.php';
-?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Secure Login: Registration Form</title>
-        <script type="text/JavaScript" src="assets/js/sha512.js"></script> 
-        <script type="text/JavaScript" src="assets/js/forms.js"></script>
-        <link rel="stylesheet" href="styles/main.css" />
-    </head>
-    <body>
-        <!-- Registration form to be output if the POST variables are not
-        set or if the registration script caused an error. -->
-        <h1>Register with us</h1>
-        <?php
-        if (!empty($error_msg)) {
-            echo $error_msg;
-        }
-        ?>
-        <ul>
-            <li>Usernames may contain only digits, upper and lowercase letters and underscores</li>
-            <li>Emails must have a valid email format</li>
-            <li>Passwords must be at least 6 characters long</li>
-            <li>Passwords must contain
-                <ul>
-                    <li>At least one uppercase letter (A..Z)</li>
-                    <li>At least one lowercase letter (a..z)</li>
-                    <li>At least one number (0..9)</li>
-                </ul>
-            </li>
-            <li>Your password and confirmation must match exactly</li>
-        </ul>
-        <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" 
-                method="post" 
-                name="registration_form">
-            Username: <input type='text' 
-                name='username' 
-                id='username' /><br>
-            Email: <input type="text" name="email" id="email" /><br>
-            Password: <input type="password"
-                             name="password" 
-                             id="password"/><br>
-            Confirm password: <input type="password" 
-                                     name="confirmpwd" 
-                                     id="confirmpwd" /><br>
-            <input type="button" 
-                   value="Register" 
-                   onclick="return regformhash(this.form,
-                                   this.form.username,
-                                   this.form.email,
-                                   this.form.password,
-                                   this.form.confirmpwd);" /> 
-        </form>
-        <p>Return to the <a href="index.php">login page</a>.</p>
-    </body>
-</html>
+
+/**
+ * A simple, clean and secure PHP Login Script / MINIMAL VERSION
+ *
+ * Uses PHP SESSIONS, modern password-hashing and salting and gives the basic functions a proper login system needs.
+ *
+ * @author Panique
+ * @link https://github.com/panique/php-login-minimal/
+ * @license http://opensource.org/licenses/MIT MIT License
+ */
+
+// checking for minimum PHP version
+if (version_compare(PHP_VERSION, '5.3.7', '<')) {
+    exit("Sorry, Simple PHP Login does not run on a PHP version smaller than 5.3.7 !");
+} else if (version_compare(PHP_VERSION, '5.5.0', '<')) {
+    // if you are using PHP 5.3 or PHP 5.4 you have to include the password_api_compatibility_library.php
+    // (this library adds the PHP 5.5 password hashing functions to older versions of PHP)
+    require_once("libraries/password_compatibility_library.php");
+}
+
+// include the configs / constants for the database connection
+require_once("config/db.php");
+
+// load the registration class
+require_once("classes/Registration.php");
+
+// create the registration object. when this object is created, it will do all registration stuff automatically
+// so this single line handles the entire registration process.
+$registration = new Registration();
+
+// show the register view (with the registration form, and messages/errors)
+include("views/register.php");
